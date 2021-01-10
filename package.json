@@ -9,7 +9,10 @@
     "rebind": "./lib/bs/native/Rebind.exe"
   },
   "jest": {
-    "testPathIgnorePatterns": ["<rootDir>/__tests__/input/", "<rootDir>/node_modules/"]
+    "testPathIgnorePatterns": [
+      "<rootDir>/__tests__/input/",
+      "<rootDir>/node_modules/"
+    ]
   },
   "scripts": {
     "build": "bsb -make-world -backend native",
@@ -18,10 +21,11 @@
     "start": "./lib/bs/native/Rebind.exe ./__tests__/input/001.test.js | refmt --parse binary --print re",
     "start:js": "node ./src/js/Main.bs.js ./__tests__/input/007.test.js",
     "getReasonAst": "refmt --print ast ./getReasonAst.re",
-    "test": "npm run build && npm run build:js && jest"
+    "test": "npm run build && npm run build:js && jest",
+    "watch:screen": "screen -c .screenrc"
   },
   "devDependencies": {
-    "@glennsl/bs-jest": "^0.4.2",
+    "@glennsl/bs-jest": "^0.6.0",
     "bs-platform": "bsansouci/bsb-native#release"
   }
 }
