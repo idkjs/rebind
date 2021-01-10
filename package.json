@@ -10,8 +10,8 @@
   },
   "jest": {
     "testPathIgnorePatterns": [
-      "<rootDir>/__tests__/input/",
-      "<rootDir>/node_modules/"
+      "/node_modules/",
+      "/__tests__/input/"
     ]
   },
   "scripts": {
@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@glennsl/bs-jest": "^0.6.0",
-    "bs-platform": "bsansouci/bsb-native#release"
+    "bs-platform": "bsansouci/bsb-native#release",
+    "jest": "^26.6.3"
   }
 }
